@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  TopEvent
+
+  Created by Владислав Патраков on 14.06.2022.
+  
+*/
+
+"signInTitle" = "Welcome";
+"signInMessage" = "After authorization, you will be able to add events to your schedule, evaluate performances.";
+"signButtonTitle" = "Sign in with Google";
+"cancelButtonTitle" = "Cancel";
+
+"signOutTitle" = "Sign Out";
+"outButtonTitle" = "Sign Out";

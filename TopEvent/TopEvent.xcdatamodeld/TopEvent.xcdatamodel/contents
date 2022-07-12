@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="EventModel" representedClassName="EventModel" syncable="YES">
+        <attribute name="detail" optional="YES" attributeType="String"/>
+        <attribute name="favoriteStatus" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="tags" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="speakers" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="SpeakerModel" inverseName="event" inverseEntity="SpeakerModel"/>
+    </entity>
+    <entity name="SpeakerModel" representedClassName="SpeakerModel" syncable="YES">
+        <attribute name="contactInformation" optional="YES" attributeType="String"/>
+        <attribute name="fullName" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="specialization" optional="YES" attributeType="String"/>
+        <attribute name="technicalSkills" optional="YES" attributeType="String"/>
+        <attribute name="thumbnailURL" optional="YES" attributeType="String"/>
+        <relationship name="event" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EventModel" inverseName="speakers" inverseEntity="EventModel"/>
+    </entity>
+    <entity name="UserModel" representedClassName="UserModel" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="thumbnailURL" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="EventModel" positionX="-63" positionY="-18" width="128" height="164"/>
+        <element name="SpeakerModel" positionX="-54" positionY="0" width="128" height="14"/>
+        <element name="UserModel" positionX="-36" positionY="9" width="128" height="89"/>
+    </elements>
+</model>

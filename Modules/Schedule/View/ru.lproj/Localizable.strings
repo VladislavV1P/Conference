@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  TopEvent
+
+  Created by Владислав Патраков on 14.06.2022.
+  
+*/
+
+"signInTitle" = "Вход";
+"signInMessage" = "После авторизации вы сможете добавлять мероприятия в свое расписание, оценивать выступления.";
+"signButtonTitle" = "Войдите с помощью Google";
+"cancelButtonTitle" = "Отмена";
+
+"signOutTitle" = "Выйти из аккаунта";
+"outButtonTitle" = "Выйти";

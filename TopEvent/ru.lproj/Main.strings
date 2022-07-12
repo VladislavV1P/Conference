@@ -1,0 +1,9 @@
+
+/* Class = "UITabBarItem"; title = "Favorite"; ObjectID = "8Ck-eL-VvZ"; */
+"8Ck-eL-VvZ.title" = "Избранное";
+
+/* Class = "UITabBarItem"; title = "All"; ObjectID = "cBl-Do-7dd"; */
+"cBl-Do-7dd.title" = "Все";
+
+/* Class = "UINavigationItem"; title = "Root View Controller"; ObjectID = "yR9-bm-QzQ"; */
+"yR9-bm-QzQ.title" = "Root View Controller";
