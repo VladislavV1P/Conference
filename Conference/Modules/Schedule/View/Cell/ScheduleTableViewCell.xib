@@ -26,10 +26,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ps6-rB-3Lr">
-                                <rect key="frame" x="56" y="0.0" width="253" height="115"/>
+                                <rect key="frame" x="56" y="0.0" width="226" height="115"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Название конференции " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ivr-CH-cUg">
-                                        <rect key="frame" x="0.0" y="0.0" width="230" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="226" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -55,9 +55,9 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzV-TA-eG5">
-                                <rect key="frame" x="319" y="0.0" width="23" height="115"/>
+                                <rect key="frame" x="292" y="0.0" width="50" height="115"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="23" id="PFJ-kA-OdH"/>
+                                    <constraint firstAttribute="width" constant="50" id="PFJ-kA-OdH"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" image="star" catalog="system"/>
