@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01BCB699A0679B5D7DA9EA2D /* AboutSpeakerInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5414A96DE4AA886C6AE39E3 /* AboutSpeakerInteractorOutput.swift */; };
+		02B21EE302AF352E449B7261 /* AboutSpeakerModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6DCADA43FFE44F93E3A79 /* AboutSpeakerModuleInput.swift */; };
 		0864842251EFE6DAC1A797DC /* ScheduleConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8227C2EB8648D63422F134 /* ScheduleConfigurator.swift */; };
 		0F80E1C76A9A10F8BA51E9DE /* EventDetailsRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E70EC7B3AC7F9389623CC /* EventDetailsRouterInput.swift */; };
+		14B07DF048CDFFEE8DA5D44D /* AboutSpeakerRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1FB01F5E6AA126087EB048 /* AboutSpeakerRouterInput.swift */; };
 		181BBC602846E1F6009BA10C /* EventScheduleFromServerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BBC5F2846E1F6009BA10C /* EventScheduleFromServerInput.swift */; };
 		181BBC622846E598009BA10C /* ScheduleTableViewCellInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BBC612846E598009BA10C /* ScheduleTableViewCellInput.swift */; };
 		181BBC642846E5B1009BA10C /* ScheduleTableViewCellOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BBC632846E5B1009BA10C /* ScheduleTableViewCellOutput.swift */; };
@@ -45,40 +48,37 @@
 		182F99E328438F7100F41181 /* EventCoreDataStoreInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182F99E228438F7100F41181 /* EventCoreDataStoreInput.swift */; };
 		1830D01A284F60DF00CEC234 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1830D019284F60DF00CEC234 /* Collection.swift */; };
 		1B5EA7D003C1AF220BEA15DD /* EventDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADD02E3E11EF53CD4F015A8 /* EventDetailsInteractor.swift */; };
-		22351DA42490185A27824BE6 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551DCE22ACF198A9A53F6BE /* AuthenticationViewController.swift */; };
 		275825B1E2833821E365FE40 /* ScheduleViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34254EFC03CCF10621F6CDD8 /* ScheduleViewOutput.swift */; };
-		2F4973F3912153572CBE3478 /* AuthenticationModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7528B1B9B34537E4784EB2C /* AuthenticationModuleInput.swift */; };
-		3375C1B5D8B08F8BA02F335F /* AuthenticationInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19DB61ED9B12DB5DD9E23132 /* AuthenticationInteractorInput.swift */; };
-		3AE11FC71E266DB5CD927D62 /* AuthenticationInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930CF09E542135BB50E4453E /* AuthenticationInitializer.swift */; };
+		2854E07BD8B1136790D453B7 /* AboutSpeakerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585160073CA23E65A30804DA /* AboutSpeakerPresenter.swift */; };
+		3640ACBF297A467216D81393 /* AboutSpeakerConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B286DC6537EAD98E5728A59D /* AboutSpeakerConfigurator.swift */; };
+		3F0E9199602C07B7A8772132 /* AboutSpeakerViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E648C92E1FAAEA41D2879767 /* AboutSpeakerViewOutput.swift */; };
 		409398A727EA7C71FA7D6322 /* ScheduleViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A7C6F4679A4BDD89B1D543C /* ScheduleViewInput.swift */; };
-		4F07593DBA4BDB480229E1F3 /* AuthenticationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A71B36AD546F6336B6271E /* AuthenticationPresenter.swift */; };
 		520EAC78C69E777581D4EAC4 /* EventDetailsViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EB73A4FADC4153F1CD5A0 /* EventDetailsViewOutput.swift */; };
-		540D168E6751419919C43FA5 /* AuthenticationViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645F65E02E2156E683A88FEC /* AuthenticationViewOutput.swift */; };
 		6AC369BD69FCE52856FB3B11 /* ScheduleInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B743034094711574B6489C3 /* ScheduleInteractorInput.swift */; };
 		762434D2DF5C006B74F1D947 /* EventDetailsModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740BB398768AA3A3892851C5 /* EventDetailsModuleInput.swift */; };
 		797AFD848C48A2EBA1C81FBC /* EventDetailsInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D449CC7CEBFDA8D502C64940 /* EventDetailsInteractorOutput.swift */; };
 		7B770E295FE6D6F468EFEA8A /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3974D2234634637F1F63D6 /* EventDetailsViewController.swift */; };
-		7E57BC5572A1357EEACD9709 /* AuthenticationRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4593D8060AB24F2506C833 /* AuthenticationRouterInput.swift */; };
-		83F672D9F8203288C019C8E8 /* AuthenticationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E34B5570897D00BCF6C073 /* AuthenticationConfigurator.swift */; };
+		839E3997DBD7F7A01AE52E7E /* AboutSpeakerViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660DA75B59FA3C28F67316D7 /* AboutSpeakerViewInput.swift */; };
 		8B177FF20C1DEF67B8E0F269 /* EventDetailsInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51474A0B7A62E6CE9DF0B8E /* EventDetailsInteractorInput.swift */; };
+		9372ECA4F93D5C9948AA3793 /* AboutSpeakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2614DB1CA4CCBED0B17F3A0 /* AboutSpeakerViewController.swift */; };
 		9AAAD521277CE15595B01F79 /* ScheduleInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3DC1B5F66F00CBEF35ADF96 /* ScheduleInteractorOutput.swift */; };
-		A08769374F80563527DEC561 /* AuthenticationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054E6A4BD4436829C5439D99 /* AuthenticationInteractor.swift */; };
+		9AC1E76275E117E115FFA66D /* AboutSpeakerInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4671C615E6F71B26079065E7 /* AboutSpeakerInteractor.swift */; };
 		ABE8FFB8B824A2882CB3DF70 /* ScheduleInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C841D51A80E1AC11D53912C0 /* ScheduleInitializer.swift */; };
-		AEA132E881C4284D725D9C55 /* AuthenticationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC835A41553046A71686713 /* AuthenticationRouter.swift */; };
+		B0976110949AD592E11CEE7D /* AboutSpeakerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B9B8BA50C7527119BCD22B /* AboutSpeakerRouter.swift */; };
 		B42A292B4007A12A43D8FA28 /* EventDetailsViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BCB1B6F712BF5120AEE6400 /* EventDetailsViewInput.swift */; };
 		B52FDFE66BBAB5F62E590BAA /* EventDetailsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B76E4F9BF8D63547F543B96 /* EventDetailsConfigurator.swift */; };
 		B87C89C10916942E4AFA8BC6 /* EventDetailsInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E6775D1C9CAFB3A3A4E73E /* EventDetailsInitializer.swift */; };
 		BECF19BF6731175228BD7422 /* EventDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CE3442C9683CD1255BF66AC /* EventDetailsPresenter.swift */; };
-		CDF91A893C732425C44C6BEC /* AuthenticationInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EAD6986D0F75C6C1172ADB9 /* AuthenticationInteractorOutput.swift */; };
-		D6D51E5926A13ECDFD36BE48 /* AuthenticationViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA3CEEB1EE21D3413D8739C /* AuthenticationViewInput.swift */; };
 		D7836FA4FD7DDB55308DA33B /* ScheduleRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED4E1AF665A5A3E88FA7298 /* ScheduleRouterInput.swift */; };
+		D7D496E8D10A16D97AF0A07C /* AboutSpeakerInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06494936AB9124CDE465B7F3 /* AboutSpeakerInitializer.swift */; };
 		E013214B8752BB0994B9026E /* EventDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF7F3C09D9EFEFEE1F9A7803 /* EventDetailsRouter.swift */; };
 		E0B0A8CAF6283091F51A5EB3 /* ScheduleModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87BBF5FC9ECA6BD060EB6BB /* ScheduleModuleInput.swift */; };
+		F24AE5C845390BD208513287 /* AboutSpeakerInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B791F6B25090290569612BD /* AboutSpeakerInteractorInput.swift */; };
 		F85BAB7CC41F433A8EA7E765 /* Pods_TopEvent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF16A85E2BBC47F4CD57609 /* Pods_TopEvent.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		054E6A4BD4436829C5439D99 /* AuthenticationInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationInteractor.swift; sourceTree = "<group>"; };
+		06494936AB9124CDE465B7F3 /* AboutSpeakerInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutSpeakerInitializer.swift; sourceTree = "<group>"; };
 		181BBC5F2846E1F6009BA10C /* EventScheduleFromServerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScheduleFromServerInput.swift; sourceTree = "<group>"; };
 		181BBC612846E598009BA10C /* ScheduleTableViewCellInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCellInput.swift; sourceTree = "<group>"; };
 		181BBC632846E5B1009BA10C /* ScheduleTableViewCellOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCellOutput.swift; sourceTree = "<group>"; };
@@ -118,35 +118,35 @@
 		182F99E028411DAE00F41181 /* EventCoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCoreDataStore.swift; sourceTree = "<group>"; };
 		182F99E228438F7100F41181 /* EventCoreDataStoreInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCoreDataStoreInput.swift; sourceTree = "<group>"; };
 		1830D019284F60DF00CEC234 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
-		19DB61ED9B12DB5DD9E23132 /* AuthenticationInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationInteractorInput.swift; sourceTree = "<group>"; };
-		1EAD6986D0F75C6C1172ADB9 /* AuthenticationInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationInteractorOutput.swift; sourceTree = "<group>"; };
-		20A71B36AD546F6336B6271E /* AuthenticationPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationPresenter.swift; sourceTree = "<group>"; };
 		262E70EC7B3AC7F9389623CC /* EventDetailsRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventDetailsRouterInput.swift; sourceTree = "<group>"; };
-		2BC835A41553046A71686713 /* AuthenticationRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationRouter.swift; sourceTree = "<group>"; };
+		2B791F6B25090290569612BD /* AboutSpeakerInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutSpeakerInteractorInput.swift; sourceTree = "<group>"; };
 		31E6775D1C9CAFB3A3A4E73E /* EventDetailsInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventDetailsInitializer.swift; sourceTree = "<group>"; };
 		34254EFC03CCF10621F6CDD8 /* ScheduleViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScheduleViewOutput.swift; sourceTree = "<group>"; };
 		3B743034094711574B6489C3 /* ScheduleInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScheduleInteractorInput.swift; sourceTree = "<group>"; };
-		4A4593D8060AB24F2506C833 /* AuthenticationRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationRouterInput.swift; sourceTree = "<group>"; };
+		4671C615E6F71B26079065E7 /* AboutSpeakerInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutSpeakerInteractor.swift; sourceTree = "<group>"; };
 		4B76E4F9BF8D63547F543B96 /* EventDetailsConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventDetailsConfigurator.swift; sourceTree = "<group>"; };
-		4BA3CEEB1EE21D3413D8739C /* AuthenticationViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationViewInput.swift; sourceTree = "<group>"; };
+		585160073CA23E65A30804DA /* AboutSpeakerPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutSpeakerPresenter.swift; sourceTree = "<group>"; };
 		5A1476E870EF61E7F6148465 /* Pods-TopEvent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopEvent.release.xcconfig"; path = "Target Support Files/Pods-TopEvent/Pods-TopEvent.release.xcconfig"; sourceTree = "<group>"; };
-		60E34B5570897D00BCF6C073 /* AuthenticationConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationConfigurator.swift; sourceTree = "<group>"; };
-		645F65E02E2156E683A88FEC /* AuthenticationViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationViewOutput.swift; sourceTree = "<group>"; };
-		6551DCE22ACF198A9A53F6BE /* AuthenticationViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
+		660DA75B59FA3C28F67316D7 /* AboutSpeakerViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutSpeakerViewInput.swift; sourceTree = "<group>"; };
+		66F6DCADA43FFE44F93E3A79 /* AboutSpeakerModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutSpeakerModuleInput.swift; sourceTree = "<group>"; };
 		6A7C6F4679A4BDD89B1D543C /* ScheduleViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScheduleViewInput.swift; sourceTree = "<group>"; };
 		740BB398768AA3A3892851C5 /* EventDetailsModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventDetailsModuleInput.swift; sourceTree = "<group>"; };
 		7B3974D2234634637F1F63D6 /* EventDetailsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
 		7BCB1B6F712BF5120AEE6400 /* EventDetailsViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventDetailsViewInput.swift; sourceTree = "<group>"; };
 		8ADD02E3E11EF53CD4F015A8 /* EventDetailsInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventDetailsInteractor.swift; sourceTree = "<group>"; };
 		8CE3442C9683CD1255BF66AC /* EventDetailsPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventDetailsPresenter.swift; sourceTree = "<group>"; };
-		930CF09E542135BB50E4453E /* AuthenticationInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationInitializer.swift; sourceTree = "<group>"; };
+		B1B9B8BA50C7527119BCD22B /* AboutSpeakerRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutSpeakerRouter.swift; sourceTree = "<group>"; };
+		B286DC6537EAD98E5728A59D /* AboutSpeakerConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutSpeakerConfigurator.swift; sourceTree = "<group>"; };
 		B9B347FE86EE08874E357377 /* Pods-TopEvent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopEvent.debug.xcconfig"; path = "Target Support Files/Pods-TopEvent/Pods-TopEvent.debug.xcconfig"; sourceTree = "<group>"; };
 		BA8227C2EB8648D63422F134 /* ScheduleConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScheduleConfigurator.swift; sourceTree = "<group>"; };
+		BC1FB01F5E6AA126087EB048 /* AboutSpeakerRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutSpeakerRouterInput.swift; sourceTree = "<group>"; };
 		C841D51A80E1AC11D53912C0 /* ScheduleInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScheduleInitializer.swift; sourceTree = "<group>"; };
 		CBF16A85E2BBC47F4CD57609 /* Pods_TopEvent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopEvent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF7F3C09D9EFEFEE1F9A7803 /* EventDetailsRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventDetailsRouter.swift; sourceTree = "<group>"; };
+		D2614DB1CA4CCBED0B17F3A0 /* AboutSpeakerViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutSpeakerViewController.swift; sourceTree = "<group>"; };
 		D449CC7CEBFDA8D502C64940 /* EventDetailsInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventDetailsInteractorOutput.swift; sourceTree = "<group>"; };
-		D7528B1B9B34537E4784EB2C /* AuthenticationModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationModuleInput.swift; sourceTree = "<group>"; };
+		E5414A96DE4AA886C6AE39E3 /* AboutSpeakerInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutSpeakerInteractorOutput.swift; sourceTree = "<group>"; };
+		E648C92E1FAAEA41D2879767 /* AboutSpeakerViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AboutSpeakerViewOutput.swift; sourceTree = "<group>"; };
 		E90EB73A4FADC4153F1CD5A0 /* EventDetailsViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventDetailsViewOutput.swift; sourceTree = "<group>"; };
 		F3DC1B5F66F00CBEF35ADF96 /* ScheduleInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScheduleInteractorOutput.swift; sourceTree = "<group>"; };
 		F51474A0B7A62E6CE9DF0B8E /* EventDetailsInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventDetailsInteractorInput.swift; sourceTree = "<group>"; };
@@ -166,24 +166,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02F52B7C26D648B8FC4C62C4 /* Authentication */ = {
-			isa = PBXGroup;
-			children = (
-				F96E772E57B9DE00F2B7D059 /* View */,
-				3939DDE6F9466F141EFACEBA /* Presenter */,
-				9CB2FA2A20FE28182E8FE6BE /* Interactor */,
-				1FB0504B2BCB9E4DFF64B5B4 /* Router */,
-				370F3EB1BADDC69804A4E579 /* Configurator */,
-			);
-			path = Authentication;
-			sourceTree = "<group>";
-		};
 		06275711D511B2A2BFA1DF63 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				CBF16A85E2BBC47F4CD57609 /* Pods_TopEvent.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		113C2CF69156CDDAF7D342A9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				66F6DCADA43FFE44F93E3A79 /* AboutSpeakerModuleInput.swift */,
+				585160073CA23E65A30804DA /* AboutSpeakerPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		182649C528366CD800D938C1 = {
@@ -351,31 +348,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		1FB0504B2BCB9E4DFF64B5B4 /* Router */ = {
+		29708C92B85DC67D07592FB9 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				4A4593D8060AB24F2506C833 /* AuthenticationRouterInput.swift */,
-				2BC835A41553046A71686713 /* AuthenticationRouter.swift */,
+				BC1FB01F5E6AA126087EB048 /* AboutSpeakerRouterInput.swift */,
+				B1B9B8BA50C7527119BCD22B /* AboutSpeakerRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
 		};
-		370F3EB1BADDC69804A4E579 /* Configurator */ = {
+		30D7B5AA015F3DBA5711C901 /* Configurator */ = {
 			isa = PBXGroup;
 			children = (
-				60E34B5570897D00BCF6C073 /* AuthenticationConfigurator.swift */,
-				930CF09E542135BB50E4453E /* AuthenticationInitializer.swift */,
+				B286DC6537EAD98E5728A59D /* AboutSpeakerConfigurator.swift */,
+				06494936AB9124CDE465B7F3 /* AboutSpeakerInitializer.swift */,
 			);
 			path = Configurator;
-			sourceTree = "<group>";
-		};
-		3939DDE6F9466F141EFACEBA /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				D7528B1B9B34537E4784EB2C /* AuthenticationModuleInput.swift */,
-				20A71B36AD546F6336B6271E /* AuthenticationPresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		41BE428EC38FD9C9DACD6192 /* Modules */ = {
@@ -383,9 +371,21 @@
 			children = (
 				182F9940283BA09A00F41181 /* Schedule */,
 				AA2CC1D46F125F97C38242A7 /* EventDetails */,
-				02F52B7C26D648B8FC4C62C4 /* Authentication */,
+				51E77E3850869922D085E2EF /* AboutSpeaker */,
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		51E77E3850869922D085E2EF /* AboutSpeaker */ = {
+			isa = PBXGroup;
+			children = (
+				ACC368607C92A070672C5AC3 /* View */,
+				113C2CF69156CDDAF7D342A9 /* Presenter */,
+				99DCCD9EC62D24A34131F349 /* Interactor */,
+				29708C92B85DC67D07592FB9 /* Router */,
+				30D7B5AA015F3DBA5711C901 /* Configurator */,
+			);
+			path = AboutSpeaker;
 			sourceTree = "<group>";
 		};
 		7EAB42793CF54B5ED082C0E8 /* Router */ = {
@@ -397,12 +397,12 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		9CB2FA2A20FE28182E8FE6BE /* Interactor */ = {
+		99DCCD9EC62D24A34131F349 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				19DB61ED9B12DB5DD9E23132 /* AuthenticationInteractorInput.swift */,
-				1EAD6986D0F75C6C1172ADB9 /* AuthenticationInteractorOutput.swift */,
-				054E6A4BD4436829C5439D99 /* AuthenticationInteractor.swift */,
+				2B791F6B25090290569612BD /* AboutSpeakerInteractorInput.swift */,
+				E5414A96DE4AA886C6AE39E3 /* AboutSpeakerInteractorOutput.swift */,
+				4671C615E6F71B26079065E7 /* AboutSpeakerInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -426,6 +426,16 @@
 				9EC97347DFA7375760B39B77 /* Configurator */,
 			);
 			path = EventDetails;
+			sourceTree = "<group>";
+		};
+		ACC368607C92A070672C5AC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				660DA75B59FA3C28F67316D7 /* AboutSpeakerViewInput.swift */,
+				E648C92E1FAAEA41D2879767 /* AboutSpeakerViewOutput.swift */,
+				D2614DB1CA4CCBED0B17F3A0 /* AboutSpeakerViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B569A000DB4C19E9C6F1E90B /* Presenter */ = {
@@ -464,16 +474,6 @@
 				8ADD02E3E11EF53CD4F015A8 /* EventDetailsInteractor.swift */,
 			);
 			path = Interactor;
-			sourceTree = "<group>";
-		};
-		F96E772E57B9DE00F2B7D059 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				4BA3CEEB1EE21D3413D8739C /* AuthenticationViewInput.swift */,
-				645F65E02E2156E683A88FEC /* AuthenticationViewOutput.swift */,
-				6551DCE22ACF198A9A53F6BE /* AuthenticationViewController.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -632,18 +632,6 @@
 				182F99E328438F7100F41181 /* EventCoreDataStoreInput.swift in Sources */,
 				0864842251EFE6DAC1A797DC /* ScheduleConfigurator.swift in Sources */,
 				ABE8FFB8B824A2882CB3DF70 /* ScheduleInitializer.swift in Sources */,
-				D6D51E5926A13ECDFD36BE48 /* AuthenticationViewInput.swift in Sources */,
-				540D168E6751419919C43FA5 /* AuthenticationViewOutput.swift in Sources */,
-				22351DA42490185A27824BE6 /* AuthenticationViewController.swift in Sources */,
-				2F4973F3912153572CBE3478 /* AuthenticationModuleInput.swift in Sources */,
-				4F07593DBA4BDB480229E1F3 /* AuthenticationPresenter.swift in Sources */,
-				3375C1B5D8B08F8BA02F335F /* AuthenticationInteractorInput.swift in Sources */,
-				CDF91A893C732425C44C6BEC /* AuthenticationInteractorOutput.swift in Sources */,
-				A08769374F80563527DEC561 /* AuthenticationInteractor.swift in Sources */,
-				7E57BC5572A1357EEACD9709 /* AuthenticationRouterInput.swift in Sources */,
-				AEA132E881C4284D725D9C55 /* AuthenticationRouter.swift in Sources */,
-				83F672D9F8203288C019C8E8 /* AuthenticationConfigurator.swift in Sources */,
-				3AE11FC71E266DB5CD927D62 /* AuthenticationInitializer.swift in Sources */,
 				B42A292B4007A12A43D8FA28 /* EventDetailsViewInput.swift in Sources */,
 				520EAC78C69E777581D4EAC4 /* EventDetailsViewOutput.swift in Sources */,
 				7B770E295FE6D6F468EFEA8A /* EventDetailsViewController.swift in Sources */,
@@ -656,6 +644,18 @@
 				E013214B8752BB0994B9026E /* EventDetailsRouter.swift in Sources */,
 				B52FDFE66BBAB5F62E590BAA /* EventDetailsConfigurator.swift in Sources */,
 				B87C89C10916942E4AFA8BC6 /* EventDetailsInitializer.swift in Sources */,
+				839E3997DBD7F7A01AE52E7E /* AboutSpeakerViewInput.swift in Sources */,
+				3F0E9199602C07B7A8772132 /* AboutSpeakerViewOutput.swift in Sources */,
+				9372ECA4F93D5C9948AA3793 /* AboutSpeakerViewController.swift in Sources */,
+				02B21EE302AF352E449B7261 /* AboutSpeakerModuleInput.swift in Sources */,
+				2854E07BD8B1136790D453B7 /* AboutSpeakerPresenter.swift in Sources */,
+				F24AE5C845390BD208513287 /* AboutSpeakerInteractorInput.swift in Sources */,
+				01BCB699A0679B5D7DA9EA2D /* AboutSpeakerInteractorOutput.swift in Sources */,
+				9AC1E76275E117E115FFA66D /* AboutSpeakerInteractor.swift in Sources */,
+				14B07DF048CDFFEE8DA5D44D /* AboutSpeakerRouterInput.swift in Sources */,
+				B0976110949AD592E11CEE7D /* AboutSpeakerRouter.swift in Sources */,
+				3640ACBF297A467216D81393 /* AboutSpeakerConfigurator.swift in Sources */,
+				D7D496E8D10A16D97AF0A07C /* AboutSpeakerInitializer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

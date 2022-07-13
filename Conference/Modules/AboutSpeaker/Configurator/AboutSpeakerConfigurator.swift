@@ -1,31 +1,31 @@
 //
-//  AuthenticationAuthenticationConfigurator.swift
+//  AboutSpeakerAboutSpeakerConfigurator.swift
 //  TopEvent
 //
-//  Created by Vladislav Patrakov on 08/06/2022.
+//  Created by Vladislav Patrakov on 13/07/2022.
 //  Copyright © 2022 OSinit. All rights reserved.
 //
 
 import UIKit
 
-class AuthenticationModuleConfigurator {
+class AboutSpeakerModuleConfigurator {
 
     func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
 
-        if let viewController = viewInput as? AuthenticationViewController {
+        if let viewController = viewInput as? AboutSpeakerViewController {
             configure(viewController: viewController)
         }
     }
 
-    private func configure(viewController: AuthenticationViewController) {
+    private func configure(viewController: AboutSpeakerViewController) {
 
-        let router = AuthenticationRouter()
+        let router = AboutSpeakerRouter()
 
-        let presenter = AuthenticationPresenter()
+        let presenter = AboutSpeakerPresenter()
         presenter.view = viewController
         presenter.router = router
 
-        let interactor = AuthenticationInteractor()
+        let interactor = AboutSpeakerInteractor()
         interactor.output = presenter
 
         presenter.interactor = interactor
