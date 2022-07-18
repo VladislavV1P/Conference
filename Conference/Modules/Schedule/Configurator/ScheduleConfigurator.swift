@@ -18,7 +18,7 @@ class ScheduleModuleConfigurator {
     }
 
     private func configure(viewController: ScheduleTableViewController) {
-        let eventCoreData = EventCoreDataStore()
+        let eventStorageService = EventStorageService()
         let eventScheduleFromServer = EventScheduleFromServer()
         
         let authProvider = AuthProvider()
@@ -33,7 +33,7 @@ class ScheduleModuleConfigurator {
 
         let interactor = ScheduleInteractor()
         interactor.output = presenter
-        interactor.eventCoreData = eventCoreData
+        interactor.eventStorageService = eventStorageService
         interactor.eventScheduleFromServer = eventScheduleFromServer
         interactor.authProvider = authProvider
 

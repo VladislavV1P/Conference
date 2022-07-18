@@ -7,8 +7,8 @@
 
 import Foundation
 
-protocol EventCoreDataStoreInput {
+protocol EventStorageServiceProtocol {
     
-    func loadFavoriteEvent() -> [Event]
+    func getScheduledEvents() -> [Event]
     func saveEvent(event: [Event])
 }

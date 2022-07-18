@@ -10,6 +10,7 @@ import UIKit
 
 protocol UserAuthenticationRequirements {
     func signGoogle()
+    func signAppleID()
     func outAccount()
     var view: UIViewController? { get set }
 }

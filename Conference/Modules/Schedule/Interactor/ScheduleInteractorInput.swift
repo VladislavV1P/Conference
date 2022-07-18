@@ -14,5 +14,6 @@ protocol ScheduleInteractorInput {
     func addToFavorites(index: Int)
     func providingDataForDisplay(indexNameItem: Int, screenIndex: Int)
     func signGoogle()
+    func signAppleID()
     func outAccount()
 }

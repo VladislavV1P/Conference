@@ -9,5 +9,6 @@
 protocol ScheduleViewInput: AnyObject {
 
     func reloadInterface(with events: [Event], nameOfConference: String, nameTagItemSegmentControl: [String])
+    func setupInitialState(with events: [Event], nameOfConference: String, nameTagItemSegmentControl: [String])
     func reloadTableView()
 }

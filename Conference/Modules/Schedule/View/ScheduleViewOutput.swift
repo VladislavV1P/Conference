@@ -10,9 +10,9 @@ protocol ScheduleViewOutput {
 
     func viewIsReady(screenIndex: Int)
     func filterScheduleByTag(indexNameItem: Int, screenIndex: Int)
-    func passAuthorization(from view: ScheduleViewInput)
-    func signGoogle()
+    func passOnEventSelected(event: Event)
+    func loginToAccount(signIn: AuthorizationMethod)
     func outAccount()
-    func login(completionHandler: @escaping() -> Void)
+    func login(completionHandler: @escaping(AuthorizationMethod) -> Void)
     func singOut(completionHandler: @escaping() -> Void)
 }

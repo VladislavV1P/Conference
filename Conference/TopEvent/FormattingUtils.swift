@@ -10,12 +10,12 @@ import Foundation
 class FormattingUtils {
     
     private enum Constants {
-        static let dateFormat = "dd.MM"
+        static let dateFormatToDisplay = "dd.MM"
         static let timeFormat = "HH:mm"
     }
     
     static func formatDate(date: Date) -> String {
-        let format = date.getFormattedDate(format: Constants.dateFormat)
+        let format = date.getFormattedDate(format: Constants.dateFormatToDisplay)
         return format
     }
     
@@ -23,6 +23,9 @@ class FormattingUtils {
         let format = date.getFormattedDate(format: Constants.timeFormat)
         return format
     }
+    
+    static var dateFormatter = DateFormatter()
+    
 }
 
 extension Date {
@@ -32,5 +35,13 @@ extension Date {
        dateFormatter.timeStyle = .none
        dateFormatter.dateFormat = format
        return dateFormatter.string(from: self)
+    }
+}
+
+extension DateFormatter {
+    var formatForConvertStringToDate: DateFormatter {
+        self.locale = Locale(identifier: "en_US_POSIX")
+        self.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        return self
     }
 }

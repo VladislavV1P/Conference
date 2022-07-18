@@ -18,6 +18,10 @@ class SchedulePresenter: ScheduleModuleInput, ScheduleViewOutput, ScheduleIntera
     }
     
     func didRetrieveEventsSchedule(_ events: [Event], nameOfConference: String, nameTagItemSegmentControl: [String]) {
+        view.setupInitialState(with: events, nameOfConference: nameOfConference, nameTagItemSegmentControl: nameTagItemSegmentControl)
+    }
+    
+    func updateEventsSchedule(_ events: [Event], nameOfConference: String, nameTagItemSegmentControl: [String]) {
         view.reloadInterface(with: events, nameOfConference: nameOfConference, nameTagItemSegmentControl: nameTagItemSegmentControl)
     }
     
@@ -31,21 +35,27 @@ class SchedulePresenter: ScheduleModuleInput, ScheduleViewOutput, ScheduleIntera
         interactor.addToFavorites(index: index)
     }
     
-    func passAuthorization(from view: ScheduleViewInput) {
-        router.passAuthorization(from: view)
+    func passOnEventSelected(event: Event) {
+        router.passOnEventSelected(event: event)
     }
     
-    func signGoogle(){
-        interactor.signGoogle()
+    func loginToAccount(signIn: AuthorizationMethod){
+        switch signIn {
+        case .google:
+            interactor.signGoogle()
+        case .apple:
+            interactor.signAppleID()
+        }
+        
     }
     
     func outAccount(){
         interactor.outAccount()
     }
     
-    func login(completionHandler: @escaping () -> Void) {
-        router.login() {
-            completionHandler()
+    func login(completionHandler: @escaping (AuthorizationMethod) -> Void) {
+        router.login() { authorizationMethod in
+            completionHandler(authorizationMethod)
         }
     }
     

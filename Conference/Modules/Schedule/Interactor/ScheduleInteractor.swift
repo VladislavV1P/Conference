@@ -20,8 +20,8 @@ class ScheduleInteractor: ScheduleInteractorInput {
     }
     
     weak var output: ScheduleInteractorOutput!
-    var eventCoreData: EventCoreDataStoreInput!
-    var eventScheduleFromServer: EventScheduleFromServerInput!
+    var eventStorageService: EventStorageServiceProtocol!
+    var eventScheduleFromServer: EventScheduleServiceProtocol!
     var authProvider: UserAuthenticationRequirements!
     private var eventsScheduleDisplay = [Event]()
     private var eventsScheduleFavorite = [Event]()
@@ -36,6 +36,7 @@ class ScheduleInteractor: ScheduleInteractorInput {
                 screenIndex: screenIndex,
                 event: eventDisplay)
             self.eventsScheduleFavorite = event
+            self.eventStorageService.saveEvent(event: event)
             self.output.didRetrieveEventsSchedule(
                 event,
                 nameOfConference: nameOfConference,
@@ -58,10 +59,7 @@ class ScheduleInteractor: ScheduleInteractorInput {
                     screenIndex: screenIndex,
                     event: eventDisplay)
                 self.eventsScheduleFavorite = event
-                self.output.didRetrieveEventsSchedule(
-                    event,
-                    nameOfConference: nameOfConference,
-                    nameTagItemSegmentControl: nameTagItemSegmentControl)
+                self.output.updateEventsSchedule(event, nameOfConference: nameOfConference, nameTagItemSegmentControl: nameTagItemSegmentControl)
             }
         }
     }
@@ -103,7 +101,7 @@ class ScheduleInteractor: ScheduleInteractorInput {
 
                 return eventItem
             }
-            self.eventCoreData.saveEvent(event: eventSave)
+            self.eventStorageService.saveEvent(event: eventSave)
             if self.indexNameSegmentController == nil {
                 self.indexNameSegmentController = Constants.indexAllTagItemSegmentControl
             }
@@ -118,7 +116,7 @@ class ScheduleInteractor: ScheduleInteractorInput {
     private func getEventsScheduleDisplay(completionHandler: @escaping([Event], String) -> Void) {
         eventScheduleFromServer.getData { [weak self] event, nameOfConference in
             guard let self = self else {return}
-            let eventsFavorite = self.eventCoreData.loadFavoriteEvent()
+            let eventsFavorite = self.eventStorageService.getScheduledEvents()
             self.eventsScheduleDisplay = event.map({ event -> Event in
                 var item = event
                 if let eventFavoriteStatus = eventsFavorite.first(where: { $0.id == event.id }) {
@@ -134,6 +132,10 @@ class ScheduleInteractor: ScheduleInteractorInput {
     
     func signGoogle(){
         authProvider.signGoogle()
+    }
+    
+    func signAppleID(){
+        authProvider.signAppleID()
     }
     
     func outAccount(){

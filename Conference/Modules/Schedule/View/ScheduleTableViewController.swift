@@ -41,14 +41,6 @@ class ScheduleTableViewController: UITableViewController, ScheduleViewInput {
         let cellNib = UINib(nibName: Constants.cellIdentifierSchedule, bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: Constants.cellIdentifierSchedule)
         output?.viewIsReady(screenIndex: tabBarItem.tag)
-        
-        let headerView = HeaderView(nameOfConference: nameOfConference)
-        
-        initSearchController(nameItemsSegmentControl: nameTagItemSegmentControl,
-                             view: headerView)
-        initProfileIconButton(view: headerView)
-        
-        tableView.tableHeaderView = headerView
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,10 +48,26 @@ class ScheduleTableViewController: UITableViewController, ScheduleViewInput {
         reloadTableView()
     }
     
+    func setupInitialState(with events: [Event], nameOfConference: String, nameTagItemSegmentControl: [String]){
+        self.nameOfConference = nameOfConference
+        self.nameTagItemSegmentControl = nameTagItemSegmentControl
+        schedule = events
+        
+        let headerView = HeaderView(nameOfConference: nameOfConference)
+        initSearchController(
+            nameItemsSegmentControl: nameTagItemSegmentControl,
+            view: headerView)
+        initProfileIconButton(view: headerView)
+        tableView.tableHeaderView = headerView
+        
+        tableView.reloadData()
+    }
+    
     func reloadInterface(with events: [Event], nameOfConference: String, nameTagItemSegmentControl: [String]){
         self.nameOfConference = nameOfConference
         self.nameTagItemSegmentControl = nameTagItemSegmentControl
         schedule = events
+        
         tableView.reloadData()
     }
     
@@ -77,6 +85,10 @@ class ScheduleTableViewController: UITableViewController, ScheduleViewInput {
         cell?.inject(presenter: output!)
         cell?.setupCell(event: schedule[indexPath.row], index: indexPath.row)
         return cell ?? UITableViewCell()
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        output?.passOnEventSelected(event: schedule[indexPath.row])
     }
 }
 
@@ -127,9 +139,9 @@ extension ScheduleTableViewController {
                 self.output?.outAccount()
             }
         } else {
-            output?.login() {[weak self] in
+            output?.login() {[weak self] authorizationMethod in
                 guard let self = self else {return}
-                self.output?.signGoogle()
+                self.output?.loginToAccount(signIn: authorizationMethod)
             }
         }
     }

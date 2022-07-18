@@ -12,7 +12,7 @@ class ScheduleRouter: ScheduleRouterInput {
     
     private enum Constants {
         static let nameUIStoryboard: String = "Main"
-        static let identifierIDAuthentication: String = "Authentication"
+        static let identifierIDEventDetails: String = "EventDetails"
         
         static let signInTitle: String = NSLocalizedString("signInTitle", comment: "")
         static let signInMessage: String = NSLocalizedString("signInMessage", comment: "")
@@ -22,26 +22,34 @@ class ScheduleRouter: ScheduleRouterInput {
         static let signOutTitle: String = NSLocalizedString("signOutTitle", comment: "")
         static let signOutMessage: String = ""
         static let outButtonTitle: String = NSLocalizedString("outButtonTitle", comment: "")
+        static let signInWithApple: String = NSLocalizedString("signInWithAppleTitle", comment: "")
     }
     
     var view: UIViewController?
     
-    func passAuthorization(from view: ScheduleViewInput) {
+    func passOnEventSelected(event: Event) {
+        guard let sourceView = self.view else {return}
         let storyboard = UIStoryboard(
             name: Constants.nameUIStoryboard,
             bundle: nil)
-        if let vc = storyboard.instantiateViewController(withIdentifier: Constants.identifierIDAuthentication) as? AuthenticationViewController {
-            guard let sourceView = view as? UIViewController else {return}
-            sourceView.navigationController?.pushViewController(vc, animated: true)
+        if let vc = storyboard
+            .instantiateViewController(withIdentifier: Constants.identifierIDEventDetails) as? EventDetailsViewController {
+            
+            sourceView.navigationController?
+                .pushViewController(vc,
+                animated: true)
+            let eventDetailsModuleInitializer = EventDetailsModuleInitializer()
+            eventDetailsModuleInitializer.setupEventDetailsModuleConfigurator(view: vc, showEventId: event.id)
         }
     }
     
-    func login(completionHandler: @escaping() -> Void){
+    func login(completionHandler: @escaping(AuthorizationMethod) -> Void){
         alertForm(
+            isAppleAuthorizationButton: true,
             titleAlert: Constants.signInTitle,
             messageAlert: Constants.signInMessage,
-            titleButton: Constants.signButtonTitle) {
-                completionHandler()
+            titleButton: Constants.signButtonTitle) { authorizationMethod in
+                completionHandler(authorizationMethod)
             }
     }
     
@@ -49,26 +57,44 @@ class ScheduleRouter: ScheduleRouterInput {
         alertForm(
             titleAlert: Constants.signOutTitle,
             messageAlert: Constants.signOutMessage,
-            titleButton: Constants.outButtonTitle) {
+            titleButton: Constants.outButtonTitle) { (_) in
                 completionHandler()
             }
     }
     
-    func alertForm(titleAlert: String, messageAlert: String, titleButton: String, completionHandler: @escaping() -> Void) {
+    func alertForm(isAppleAuthorizationButton: Bool = false,
+                   titleAlert: String,
+                   messageAlert: String,
+                   titleButton: String,
+                   completionHandler: @escaping(AuthorizationMethod) -> Void) {
         let alert = UIAlertController(
             title: titleAlert,
             message: messageAlert,
             preferredStyle: .alert)
-        let outButton = UIAlertAction(
+        let authorizationGoogle = UIAlertAction(
             title: titleButton,
             style: .default) { (_) in
-                completionHandler()
+                completionHandler(.google)
             }
-        let cancelButton = UIAlertAction(
+        let cancel = UIAlertAction(
             title: Constants.cancelButtonTitle,
             style: .default)
-        alert.addAction(outButton)
-        alert.addAction(cancelButton)
+        alert.addAction(authorizationGoogle)
+        if isAppleAuthorizationButton {
+            addAuthorizationAppleIDButton(alert: alert) {
+                completionHandler(.apple)
+            }
+        }
+        alert.addAction(cancel)
         view?.present(alert, animated: true)
     }
+    
+    func addAuthorizationAppleIDButton(alert: UIAlertController, completionHandler: @escaping() -> Void){
+        let authorizationAppleID = UIAlertAction(
+            title: Constants.signInWithApple, style: .default) { (_) in
+                completionHandler()
+            }
+        alert.addAction(authorizationAppleID)
+    }
 }
+

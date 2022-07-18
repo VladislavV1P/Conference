@@ -11,4 +11,5 @@ import Foundation
 protocol ScheduleInteractorOutput: AnyObject {
 
     func didRetrieveEventsSchedule(_ events: [Event], nameOfConference: String, nameTagItemSegmentControl: [String])
+    func updateEventsSchedule(_ events: [Event], nameOfConference: String, nameTagItemSegmentControl: [String])
 }

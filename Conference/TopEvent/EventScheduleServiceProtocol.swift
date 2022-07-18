@@ -7,7 +7,6 @@
 
 import Foundation
 
-protocol EventScheduleFromServerInput {
+protocol EventScheduleServiceProtocol {
     func getData(completionHandler: @escaping([Event], String) -> Void)
-    func setData()
 }

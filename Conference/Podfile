@@ -6,6 +6,7 @@ target 'TopEvent' do
   use_frameworks!
 pod 'FirebaseAuth', '= 9.1.0'
 pod 'GoogleSignIn', '= 6.2.2'
+pod 'Alamofire'
   # Pods for TopEvent
 
 end

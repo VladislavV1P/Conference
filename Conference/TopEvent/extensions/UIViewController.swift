@@ -22,6 +22,8 @@ extension UIViewController {
       debugPrint("\(Constant.error) \(function): \(error.localizedDescription)")
       let message = "\(error.localizedDescription)\(Constant.errorMessage) \(function)"
       let alertForm = ScheduleRouter()
-      alertForm.alertForm(titleAlert: Constant.errorTitle, messageAlert: message, titleButton: Constant.buttonTitle) {}
+      alertForm.alertForm(titleAlert: Constant.errorTitle, messageAlert: message, titleButton: Constant.buttonTitle) { (_) in
+          return
+      }
   }
 }

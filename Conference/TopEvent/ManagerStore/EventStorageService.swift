@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 import UIKit
 
-class EventCoreDataStore: EventCoreDataStoreInput {
+class EventStorageService: EventStorageServiceProtocol {
     
     private enum Constants {
         static let entityEvent = "EventModel"
@@ -78,7 +78,7 @@ class EventCoreDataStore: EventCoreDataStoreInput {
         }
     }
     
-    func loadFavoriteEvent() -> [Event] {
+    func getScheduledEvents() -> [Event] {
         guard let context = declarationСontext() else { return []}
         let fetchRequest: NSFetchRequest<EventModel> = EventModel.fetchRequest()
         
@@ -134,4 +134,3 @@ class EventCoreDataStore: EventCoreDataStoreInput {
         }
     }
 }
-

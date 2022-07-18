@@ -10,8 +10,8 @@ import Foundation
 import UIKit
 
 protocol ScheduleRouterInput {
-    func passAuthorization(from view: ScheduleViewInput)
+    func passOnEventSelected(event: Event)
     var view: UIViewController? {get set}
-    func login(completionHandler: @escaping() -> Void)
+    func login(completionHandler: @escaping(AuthorizationMethod) -> Void)
     func singOut(completionHandler: @escaping() -> Void)
 }
