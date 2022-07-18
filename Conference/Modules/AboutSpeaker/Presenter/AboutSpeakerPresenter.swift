@@ -11,8 +11,19 @@ class AboutSpeakerPresenter: AboutSpeakerModuleInput, AboutSpeakerViewOutput, Ab
     weak var view: AboutSpeakerViewInput!
     var interactor: AboutSpeakerInteractorInput!
     var router: AboutSpeakerRouterInput!
+    
+    private let showSpeakerId: String
+    
+    init(showSpeakerId: String) {
+        self.showSpeakerId = showSpeakerId
+    }
 
     func viewIsReady() {
-
+        interactor.providingDataForDisplay(showSpeakerId: showSpeakerId)
+    }
+    
+    func didRetrieveAboutSpeaker(speaker: Speaker) {
+        view.setupInitialState(speaker: speaker)
     }
 }
+

@@ -10,4 +10,5 @@ import Foundation
 
 protocol AboutSpeakerInteractorInput {
 
+    func providingDataForDisplay(showSpeakerId: String)
 }

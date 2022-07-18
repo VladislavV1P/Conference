@@ -8,15 +8,12 @@
 
 import UIKit
 
-class EventDetailsModuleInitializer: NSObject {
-
-    //Connect with object on storyboard
-    @IBOutlet weak var eventdetailsViewController: EventDetailsViewController!
-
-    override func awakeFromNib() {
-
-        let configurator = EventDetailsModuleConfigurator()
-        configurator.configureModuleForViewInput(viewInput: eventdetailsViewController)
+class EventDetailsModuleInitializer {
+    
+    func setupEventDetailsModuleConfigurator(view: UIViewController, showEventId: String){
+            let configurator = EventDetailsModuleConfigurator()
+        configurator.configureModuleForViewInput(
+            viewInput: view,
+            showEventId: showEventId)
     }
-
 }

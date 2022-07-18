@@ -8,10 +8,5 @@
 
 protocol EventDetailsViewInput: AnyObject {
 
-    /**
-        @author Vladislav Patrakov
-        Setup initial state of the view
-    */
-
-    func setupInitialState()
+    func setupInitialState(event: Event)
 }

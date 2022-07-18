@@ -6,12 +6,7 @@
 //  Copyright © 2022 OSinit. All rights reserved.
 //
 
-protocol AboutSpeakerViewInput: class {
+protocol AboutSpeakerViewInput: AnyObject {
 
-    /**
-        @author Vladislav Patrakov
-        Setup initial state of the view
-    */
-
-    func setupInitialState()
+    func setupInitialState(speaker: Speaker)
 }

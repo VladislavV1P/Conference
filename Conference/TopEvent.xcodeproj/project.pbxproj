@@ -17,6 +17,8 @@
 		1809A303287ECB080092F719 /* EventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A302287ECB080092F719 /* EventResponse.swift */; };
 		1809A305287ECB310092F719 /* SpeakerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A304287ECB310092F719 /* SpeakerResponse.swift */; };
 		1809A307287ECF110092F719 /* AuthorizationMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A306287ECF110092F719 /* AuthorizationMethod.swift */; };
+		1809A30B28853F870092F719 /* EventDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1809A30928853F870092F719 /* EventDetailsTableViewCell.swift */; };
+		1809A30C28853F870092F719 /* EventDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1809A30A28853F870092F719 /* EventDetailsTableViewCell.xib */; };
 		181BBC602846E1F6009BA10C /* EventScheduleServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BBC5F2846E1F6009BA10C /* EventScheduleServiceProtocol.swift */; };
 		181BBC622846E598009BA10C /* ScheduleTableViewCellInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BBC612846E598009BA10C /* ScheduleTableViewCellInput.swift */; };
 		181BBC642846E5B1009BA10C /* ScheduleTableViewCellOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181BBC632846E5B1009BA10C /* ScheduleTableViewCellOutput.swift */; };
@@ -89,6 +91,8 @@
 		1809A302287ECB080092F719 /* EventResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResponse.swift; sourceTree = "<group>"; };
 		1809A304287ECB310092F719 /* SpeakerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerResponse.swift; sourceTree = "<group>"; };
 		1809A306287ECF110092F719 /* AuthorizationMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationMethod.swift; sourceTree = "<group>"; };
+		1809A30928853F870092F719 /* EventDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		1809A30A28853F870092F719 /* EventDetailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailsTableViewCell.xib; sourceTree = "<group>"; };
 		181BBC5F2846E1F6009BA10C /* EventScheduleServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventScheduleServiceProtocol.swift; sourceTree = "<group>"; };
 		181BBC612846E598009BA10C /* ScheduleTableViewCellInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCellInput.swift; sourceTree = "<group>"; };
 		181BBC632846E5B1009BA10C /* ScheduleTableViewCellOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCellOutput.swift; sourceTree = "<group>"; };
@@ -191,6 +195,15 @@
 				585160073CA23E65A30804DA /* AboutSpeakerPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1809A30828853F3C0092F719 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				1809A30928853F870092F719 /* EventDetailsTableViewCell.swift */,
+				1809A30A28853F870092F719 /* EventDetailsTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		182649C528366CD800D938C1 = {
@@ -466,6 +479,7 @@
 		CF1D400C3AC6118591BFBD19 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1809A30828853F3C0092F719 /* cell */,
 				7BCB1B6F712BF5120AEE6400 /* EventDetailsViewInput.swift */,
 				E90EB73A4FADC4153F1CD5A0 /* EventDetailsViewOutput.swift */,
 				7B3974D2234634637F1F63D6 /* EventDetailsViewController.swift */,
@@ -546,6 +560,7 @@
 			files = (
 				182649E128366CD900D938C1 /* LaunchScreen.storyboard in Resources */,
 				181F229028583D8000CB60EE /* Localizable.strings in Resources */,
+				1809A30C28853F870092F719 /* EventDetailsTableViewCell.xib in Resources */,
 				182649DE28366CD900D938C1 /* Assets.xcassets in Resources */,
 				181F22862853432100CB60EE /* GoogleService-Info.plist in Resources */,
 				182F994D283BA3B700F41181 /* ScheduleTableViewCell.xib in Resources */,
@@ -662,6 +677,7 @@
 				01BCB699A0679B5D7DA9EA2D /* AboutSpeakerInteractorOutput.swift in Sources */,
 				9AC1E76275E117E115FFA66D /* AboutSpeakerInteractor.swift in Sources */,
 				14B07DF048CDFFEE8DA5D44D /* AboutSpeakerRouterInput.swift in Sources */,
+				1809A30B28853F870092F719 /* EventDetailsTableViewCell.swift in Sources */,
 				1809A307287ECF110092F719 /* AuthorizationMethod.swift in Sources */,
 				1809A301287EC9E60092F719 /* ScheduleResponse.swift in Sources */,
 				B0976110949AD592E11CEE7D /* AboutSpeakerRouter.swift in Sources */,

@@ -9,17 +9,24 @@
 import UIKit
 
 class AboutSpeakerViewController: UIViewController, AboutSpeakerViewInput {
-
+    
     var output: AboutSpeakerViewOutput!
-
-    // MARK: Life cycle
+    
+    @IBOutlet private weak var nameSpeakerLabel: UILabel!
+    @IBOutlet private weak var specializationLabel: UILabel!
+    @IBOutlet private weak var hardSkills: UITextView!
+    @IBOutlet private weak var contactsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
     }
-
-
-    // MARK: AboutSpeakerViewInput
-    func setupInitialState() {
+    
+    func setupInitialState(speaker: Speaker) {
+        nameSpeakerLabel.text = speaker.fullName
+        specializationLabel.text = speaker.specialization
+        hardSkills.text = speaker.technicalSkills
+        contactsLabel.text = speaker.contactInformation
     }
 }
+

@@ -8,10 +8,6 @@
 
 protocol EventDetailsViewOutput {
 
-    /**
-        @author Vladislav Patrakov
-        Notify presenter that view is ready
-    */
-
     func viewIsReady()
+    func passOnSpeakerSelected(showSpeakerID: String)
 }

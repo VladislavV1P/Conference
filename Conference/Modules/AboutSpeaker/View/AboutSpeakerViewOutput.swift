@@ -8,10 +8,5 @@
 
 protocol AboutSpeakerViewOutput {
 
-    /**
-        @author Vladislav Patrakov
-        Notify presenter that view is ready
-    */
-
     func viewIsReady()
 }

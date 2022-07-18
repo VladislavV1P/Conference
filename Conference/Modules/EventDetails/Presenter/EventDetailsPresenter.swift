@@ -11,8 +11,23 @@ class EventDetailsPresenter: EventDetailsModuleInput, EventDetailsViewOutput, Ev
     weak var view: EventDetailsViewInput!
     var interactor: EventDetailsInteractorInput!
     var router: EventDetailsRouterInput!
-
+    
+    private let showEventId: String
+    
+    init(showEventId: String) {
+        self.showEventId = showEventId
+    }
+    
     func viewIsReady() {
-
+        interactor.providingDataForDisplay(showEventId: showEventId)
+    }
+    
+    func didRetrieveEventDetails(event: Event) {
+        view.setupInitialState(event: event)
+    }
+    
+    func passOnSpeakerSelected(showSpeakerID: String){
+        router.passOnSpeakerSelected(showSpeakerID: showSpeakerID)
     }
 }
+

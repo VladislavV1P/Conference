@@ -9,27 +9,31 @@
 import UIKit
 
 class AboutSpeakerModuleConfigurator {
-
-    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
-
+    
+    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController, showSpeakerId: String) {
+        
         if let viewController = viewInput as? AboutSpeakerViewController {
-            configure(viewController: viewController)
+            configure(
+                viewController: viewController,
+                showSpeakerId: showSpeakerId)
         }
     }
-
-    private func configure(viewController: AboutSpeakerViewController) {
-
+    
+    private func configure(viewController: AboutSpeakerViewController, showSpeakerId: String) {
+        let eventStorageService = EventStorageService()
+        
         let router = AboutSpeakerRouter()
-
-        let presenter = AboutSpeakerPresenter()
+        
+        let presenter = AboutSpeakerPresenter(
+            showSpeakerId: showSpeakerId)
         presenter.view = viewController
         presenter.router = router
-
+        
         let interactor = AboutSpeakerInteractor()
         interactor.output = presenter
-
+        interactor.eventStorageService = eventStorageService
+        
         presenter.interactor = interactor
         viewController.output = presenter
     }
-
 }

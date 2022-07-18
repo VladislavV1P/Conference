@@ -10,4 +10,5 @@ import Foundation
 
 protocol EventDetailsRouterInput {
 
+    func passOnSpeakerSelected(showSpeakerID: String)
 }

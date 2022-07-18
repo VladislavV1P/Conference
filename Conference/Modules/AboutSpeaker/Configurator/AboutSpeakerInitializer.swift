@@ -8,15 +8,13 @@
 
 import UIKit
 
-class AboutSpeakerModuleInitializer: NSObject {
+class AboutSpeakerModuleInitializer {
 
-    //Connect with object on storyboard
-    @IBOutlet weak var aboutspeakerViewController: AboutSpeakerViewController!
-
-    override func awakeFromNib() {
+    func setupAboutSpeakerModuleConfigurator(view: UIViewController, showSpeakerId: String) {
 
         let configurator = AboutSpeakerModuleConfigurator()
-        configurator.configureModuleForViewInput(viewInput: aboutspeakerViewController)
+        configurator.configureModuleForViewInput(
+            viewInput: view,
+            showSpeakerId: showSpeakerId)
     }
-
 }

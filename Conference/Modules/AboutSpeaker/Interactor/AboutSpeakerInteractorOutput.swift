@@ -8,6 +8,7 @@
 
 import Foundation
 
-protocol AboutSpeakerInteractorOutput: class {
+protocol AboutSpeakerInteractorOutput: AnyObject {
 
+    func didRetrieveAboutSpeaker(speaker: Speaker)
 }

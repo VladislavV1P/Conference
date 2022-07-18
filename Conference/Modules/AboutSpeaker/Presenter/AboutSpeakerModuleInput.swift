@@ -6,6 +6,6 @@
 //  Copyright © 2022 OSinit. All rights reserved.
 //
 
-protocol AboutSpeakerModuleInput: class {
+protocol AboutSpeakerModuleInput: AnyObject {
 
 }

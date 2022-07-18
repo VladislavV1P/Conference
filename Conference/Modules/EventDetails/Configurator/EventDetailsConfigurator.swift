@@ -9,27 +9,28 @@
 import UIKit
 
 class EventDetailsModuleConfigurator {
-
-    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController) {
-
+    
+    func configureModuleForViewInput<UIViewController>(viewInput: UIViewController, showEventId: String) {
+        
         if let viewController = viewInput as? EventDetailsViewController {
-            configure(viewController: viewController)
+            configure(viewController: viewController, showEventId: showEventId)
         }
     }
-
-    private func configure(viewController: EventDetailsViewController) {
-
-        let router = EventDetailsRouter()
-
-        let presenter = EventDetailsPresenter()
+    
+    private func configure(viewController: EventDetailsViewController, showEventId: String) {
+        let eventStorageService = EventStorageService()
+        
+        let router = EventDetailsRouter(view: viewController)
+        
+        let presenter = EventDetailsPresenter(showEventId: showEventId)
         presenter.view = viewController
         presenter.router = router
-
+        
         let interactor = EventDetailsInteractor()
         interactor.output = presenter
-
+        interactor.eventStorageService = eventStorageService
+        
         presenter.interactor = interactor
         viewController.output = presenter
     }
-
 }
