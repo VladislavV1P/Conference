@@ -97,4 +97,3 @@ class ScheduleRouter: ScheduleRouterInput {
         alert.addAction(authorizationAppleID)
     }
 }
-

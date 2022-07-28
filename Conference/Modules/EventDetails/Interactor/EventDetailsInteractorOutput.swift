@@ -9,6 +9,5 @@
 import Foundation
 
 protocol EventDetailsInteractorOutput: AnyObject {
-
     func didRetrieveEventDetails(event: Event)
 }

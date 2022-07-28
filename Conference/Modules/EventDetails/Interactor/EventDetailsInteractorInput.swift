@@ -9,6 +9,5 @@
 import Foundation
 
 protocol EventDetailsInteractorInput {
-
     func providingDataForDisplay(showEventId: String)
 }

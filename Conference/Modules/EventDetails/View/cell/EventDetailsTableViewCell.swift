@@ -2,7 +2,7 @@
 //  EventDetailsTableViewCell.swift
 //  TopEvent
 //
-//  Created by Владислав Патраков on 18.07.2022.
+//  Created by Владислав Патраков on 20.06.2022.
 //
 
 import UIKit

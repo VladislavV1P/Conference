@@ -30,4 +30,3 @@ class EventDetailsPresenter: EventDetailsModuleInput, EventDetailsViewOutput, Ev
         router.passOnSpeakerSelected(showSpeakerID: showSpeakerID)
     }
 }
-

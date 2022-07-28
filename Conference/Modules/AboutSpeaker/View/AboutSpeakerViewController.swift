@@ -2,7 +2,7 @@
 //  AboutSpeakerAboutSpeakerViewController.swift
 //  TopEvent
 //
-//  Created by Vladislav Patrakov on 13/07/2022.
+//  Created by Vladislav Patrakov on 27/06/2022.
 //  Copyright © 2022 OSinit. All rights reserved.
 //
 
@@ -29,4 +29,3 @@ class AboutSpeakerViewController: UIViewController, AboutSpeakerViewInput {
         contactsLabel.text = speaker.contactInformation
     }
 }
-
